@@ -1,0 +1,17 @@
+{
+  "name": "update_branches",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "tonytang-planity <tony.tang@planity.com>",
+  "license": "MIT",
+  "scripts": {
+    "start": "tsc -w & nodemon dist/index.js"
+  },
+  "dependencies": {
+    "simple-git": "^3.15.1",
+    "typescript": "^4.9.4"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.20"
+  }
+}

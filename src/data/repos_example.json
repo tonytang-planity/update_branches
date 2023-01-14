@@ -1,0 +1,38 @@
+{
+    "timeclock": {
+        "proapp": {
+            "workdir": "/Users/user/Desktop/workspace/pro-app",
+            "branches": [
+                {
+                    "left": "master",
+                    "right": "PLAN-5285_timeClock"
+                },
+                {
+                    "left": "master",
+                    "right": "PLAN-5285_batch_1"
+                },
+                {
+                    "left": "PLAN-5285_timeClock",
+                    "right": "PLAN-5285_batch_2"
+                }
+            ]
+        },
+        "prowebapp": {
+            "workdir": "/Users/user/Desktop/workspace/pro-webapp",
+            "branches": [
+                {
+                    "left": "master",
+                    "right": "PLAN-5285_timeClock"
+                },
+                {
+                    "left": "master",
+                    "right": "PLAN-5285_batch_1"
+                },
+                {
+                    "left": "PLAN-5285_timeClock",
+                    "right": "PLAN-5285_batch_2"
+                }
+            ]
+        }
+    }
+}

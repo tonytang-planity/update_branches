@@ -1,16 +1,14 @@
-import { Entries, PartialDeep } from 'type-fest'
+import { Entries } from 'type-fest'
 import { SimpleGit, simpleGit } from 'simple-git'
 import { Branch } from 'types/branch'
-import { Repos, ReposEntries } from 'types/repos'
-
-const MAGENTA = '\x1b[35m%s\x1b[0m'
-const RED = '\x1b[31m%s\x1b[0m'
+import { PartialRepos, ReposEntries } from 'types/repos'
+import { MAGENTA, RED } from './utils'
 
 export async function pullBranchesAndGetNbCommitsBehind(
     features: ReposEntries,
     debug: boolean
-) {
-    let branchesToUpdate: PartialDeep<Repos, { recurseIntoArrays: true }> = {}
+): Promise<PartialRepos> {
+    let branchesToUpdate: PartialRepos = {}
 
     for await (const [featureName, feature] of features) {
         console.log(`Feature: ${featureName}`)

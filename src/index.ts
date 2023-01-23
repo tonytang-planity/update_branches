@@ -12,8 +12,6 @@ async function main() {
         features,
         debug
     )
-
-    await mergeBranches(featuresToUpdate)
 }
 
 main()

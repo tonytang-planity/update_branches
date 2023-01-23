@@ -6,8 +6,9 @@
   "license": "MIT",
   "type": "module",
   "scripts": {
-    "build": "tsc",
-    "start": "tsc -w & nodemon -- --es-module-specifier-resolution=node dist/index.js"
+    "build": "npx tsc",
+    "dev": "tsc -w & nodemon -- --es-module-specifier-resolution=node dist/index.js",
+    "start": "node --es-module-specifier-resolution=node dist/index.js"
   },
   "dependencies": {
     "inquirer": "^9.1.4",

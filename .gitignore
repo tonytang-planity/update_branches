@@ -3,3 +3,4 @@ dist
 tsconfig.tsbuildinfo
 yarn-error.log
 src/data/repos.json
+.DS_Store

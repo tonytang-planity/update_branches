@@ -57,28 +57,6 @@ export async function pullBranchesAndGetNbCommitsBehind(
                         MAGENTA,
                         `[${featureName}][${appName}][${left}...${right}] - ${nbCommitsBehind} commit(s) behind`
                     )
-
-                    if (nbCommitsBehind > 0) {
-                        const branchToUpdate: Branch = { left, right }
-
-                        if (!branchesToUpdate?.[featureName]?.[appName]) {
-                            // branches do not exists
-                            branchesToUpdate = {
-                                ...branchesToUpdate,
-                                [featureName]: {
-                                    [appName]: {
-                                        workdir,
-                                        branches: [branchToUpdate],
-                                    },
-                                },
-                            }
-                        } else {
-                            // branches array already exists
-                            branchesToUpdate?.[featureName]?.[
-                                appName
-                            ]?.branches?.push(branchToUpdate)
-                        }
-                    }
                 } catch (e) {
                     console.error(
                         RED,
@@ -103,8 +81,6 @@ export async function pullBranchesAndGetNbCommitsBehind(
             }
         }
     }
-
-    return branchesToUpdate
 }
 
 async function getNbCommitsBehind(

@@ -21,6 +21,20 @@ export async function pullBranchesAndGetNbCommitsBehind(
             const { branches, workdir } = app
             const git = simpleGit(workdir)
 
+            // save curernt branch name
+            const currentBranch = await git.branchLocal()
+            console.log(`current branch : ${currentBranch.current}`)
+
+            // check if need to stash
+            const status = await git.status()
+            const needToStash = status.files.length > 0
+            if (needToStash) {
+                console.log(
+                    `Stashing changes on branch ${currentBranch.current}`
+                )
+                await git.stash()
+            }
+
             for await (const { left, right } of branches) {
                 if (debug) {
                     console.log(
@@ -71,6 +85,20 @@ export async function pullBranchesAndGetNbCommitsBehind(
                         `[${featureName}][${appName}] - Comparing ${left} with ${right}`
                     )
                     console.error(e)
+                } finally {
+                    // Go back to the current branch
+                    console.log(
+                        `Switching back to branch : ${currentBranch.current}`
+                    )
+                    await git.checkout(currentBranch.current)
+
+                    // Unstash changes if needed
+                    if (needToStash) {
+                        console.log(`Unstashing changes`)
+                        await git.stash(['pop'])
+                    }
+
+                    console.log('\n')
                 }
             }
         }

@@ -1,15 +1,12 @@
 import { Entries } from 'type-fest'
 import { SimpleGit, simpleGit } from 'simple-git'
-import { Branch } from 'types/branch'
-import { PartialRepos, ReposEntries } from 'types/repos'
+import { ReposEntries } from 'types/repos'
 import { MAGENTA, RED } from './utils'
 
 export async function pullBranchesAndGetNbCommitsBehind(
     features: ReposEntries,
     debug: boolean
-): Promise<PartialRepos> {
-    let branchesToUpdate: PartialRepos = {}
-
+) {
     for await (const [featureName, feature] of features) {
         console.log(`Feature: ${featureName}`)
 

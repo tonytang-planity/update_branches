@@ -1,5 +1,69 @@
 # How to use
 
+## What is it for ?
+To know when a branch is not up to date with another branch (usually master)
+
+## Demo
+
+Run the script : 
+```bash
+yarn build
+yarn start
+```
+
+Result:
+```bash
+Feature: pointeuse_v2
+[pointeuse_v2] - App: prowebapp
+current branch : PLAN-10525/master
+[pointeuse_v2][prowebapp][master...PLAN-9963/master] - 0 commit(s) behind
+Switching back to branch : PLAN-10525/master
+
+
+[pointeuse_v2][prowebapp][PLAN-9963/master...PLAN-10527/master] - 0 commit(s) behind
+Switching back to branch : PLAN-10525/master
+
+
+[pointeuse_v2][prowebapp][PLAN-9963/master...PLAN-10525/master] - 0 commit(s) behind
+Switching back to branch : PLAN-10525/master
+
+
+[pointeuse_v2] - App: proapp
+current branch : PLAN-10525/master
+[pointeuse_v2][proapp][master...PLAN-9963/master] - 0 commit(s) behind
+Switching back to branch : PLAN-10525/master
+
+
+[pointeuse_v2][proapp][PLAN-9963/master...PLAN-10527/master] - 0 commit(s) behind
+Switching back to branch : PLAN-10525/master
+
+
+[pointeuse_v2][proapp][PLAN-9963/master...PLAN-10525/master] - 0 commit(s) behind
+Switching back to branch : PLAN-10525/master
+
+
+[pointeuse_v2] - App: lambdas
+current branch : PLAN-10527/master
+[pointeuse_v2][lambdas][master...PLAN-9963/master] - 0 commit(s) behind
+Switching back to branch : PLAN-10527/master
+
+
+[pointeuse_v2][lambdas][PLAN-9963/master...PLAN-10527/master] - 0 commit(s) behind
+Switching back to branch : PLAN-10527/master
+
+
+[pointeuse_v2] - App: cloud-functions
+current branch : PLAN-9963/master
+[pointeuse_v2][cloud-functions][master...PLAN-9963/master] - 0 commit(s) behind
+Switching back to branch : PLAN-9963/master
+
+
+[pointeuse_v2] - App: pro-app-mobile
+current branch : PLAN-9963/master
+[pointeuse_v2][pro-app-mobile][master...PLAN-9963/master] - 0 commit(s) behind
+Switching back to branch : PLAN-9963/master
+```
+
 ## Installation
 
 ```bash

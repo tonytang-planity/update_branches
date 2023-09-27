@@ -1,4 +1,4 @@
-# How to use
+# Update your branches
 
 ## What is it for ?
 To know when a branch is not up to date with another branch (usually master)

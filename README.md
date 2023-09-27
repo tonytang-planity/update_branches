@@ -22,3 +22,7 @@ yarn build
 yarn start
 ```
 
+## Known errors
+
+- It throws an error when a branch does not exist anymore but that does not prevent the tool from working
+- Sometimes, the `git stash` command does not work (primarily on pro-app because of the Podfile) and then the tool won't be able to `git pull`

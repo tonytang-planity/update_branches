@@ -1,3 +1,5 @@
+// not used anymore beccause merging programmatically is too complicated
+
 import simpleGit, { MergeResult, SimpleGit } from 'simple-git'
 import { Entries } from 'type-fest'
 import { PartialRepos, ReposEntries } from 'types/repos'
